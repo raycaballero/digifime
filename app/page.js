@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import Carousel from '@/components/Carousel'
 import Showcase from '@/components/Showcase'
 import Features from '@/components/Features'
+import Solutions from '@/components/Solutions'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Carousel />
         <Showcase />
         <Features />
+        <Solutions />
       </div>
     </main>
   )

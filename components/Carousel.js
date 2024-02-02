@@ -2,6 +2,7 @@
 
 import { motion, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
+import FadeIn from './FadeIn'
 
 const Carousel = () => {
   const targetRef = useRef(null)
@@ -26,23 +27,25 @@ const Carousel = () => {
 
 const Card = ({ card }) => {
   return (
-    <div key={card.id} className='group'>
-      <div className='relative h-[400px] md:h-[594px] w-[250px] md:w-[382px] overflow-hidden'>
-        <div
-          style={{
-            backgroundImage: `url(${card.url})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-          className='absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110'
-        ></div>
+    <FadeIn key={card.id}>
+      <div className='group'>
+        <div className='relative h-[400px] md:h-[594px] w-[250px] md:w-[382px] overflow-hidden'>
+          <div
+            style={{
+              backgroundImage: `url(${card.url})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+            className='absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110'
+          ></div>
+        </div>
+        <div className='group-hover:text-gray-300'>
+          <h5 className='text-lg mt-10'>{card.title}</h5>
+          <h3 className='text-3xl mt-3 font-semibold'>{card.description}</h3>
+        </div>
       </div>
-      <div className='group-hover:text-gray-300'>
-        <h5 className='text-lg mt-10'>{card.title}</h5>
-        <h3 className='text-3xl mt-3 font-semibold'>{card.description}</h3>
-      </div>
-    </div>
+    </FadeIn>
   )
 }
 

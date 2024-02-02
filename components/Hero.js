@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Lottie from 'lottie-react'
 import heroBgAnimation from '../public/lotties/hero-bg.json'
 import { useInView } from 'react-intersection-observer'
+import FadeIn from './FadeIn'
 
 export const CtaButtons = () => (
   <div className='flex justify-center lg:justify-start gap-5 mt-12'>
@@ -44,21 +45,25 @@ export default function Hero() {
           height={800}
           priority
         />
-        <div className='z-10'>
-          <h1 className='capitalize text-5xl sm:text-7xl text-center lg:text-left font-semibold'>
-            Step into
-            <br /> the future
-            <br /> of ID
-            <br /> verification
-          </h1>
-          <CtaButtons />
-        </div>
-        <div className='z-10 text-lg hidden lg:block'>
-          Unlock a secure advantage with our
-          <br /> cutting-edge KYC solutions and
-          <br /> a comprehensive suite of tools to verify
-          <br /> and authenticate customer identities.
-        </div>
+        <FadeIn>
+          <div className='z-10'>
+            <h1 className='capitalize text-5xl sm:text-7xl text-center lg:text-left font-semibold'>
+              Step into
+              <br /> the future
+              <br /> of ID
+              <br /> verification
+            </h1>
+            <CtaButtons />
+          </div>
+        </FadeIn>
+        <FadeIn>
+          <div className='z-10 text-lg hidden lg:block'>
+            Unlock a secure advantage with our
+            <br /> cutting-edge KYC solutions and
+            <br /> a comprehensive suite of tools to verify
+            <br /> and authenticate customer identities.
+          </div>
+        </FadeIn>
       </div>
     </section>
   )

@@ -67,11 +67,24 @@ body {
     .cube-1 {
         animation: upAndDown 1.2s ease-in-out infinite;
     }
+
     .cube-2 {
         animation: upAndDown 1s ease-in-out infinite;
     }
+
     .cube-3 {
         animation: upAndDown 1.4s ease-in-out infinite;
+    }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fade-in.animate {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
