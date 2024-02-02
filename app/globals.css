@@ -53,6 +53,26 @@ body {
             left: -156.25%;
         }
     }
+
+    @keyframes upAndDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .cube-1 {
+        animation: upAndDown 1.2s ease-in-out infinite;
+    }
+    .cube-2 {
+        animation: upAndDown 1s ease-in-out infinite;
+    }
+    .cube-3 {
+        animation: upAndDown 1.4s ease-in-out infinite;
+    }
 }
 
 @layer utilities {

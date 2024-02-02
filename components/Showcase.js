@@ -1,37 +1,86 @@
+'use client'
+
 import Image from 'next/image'
+import { CtaButtons } from './Hero'
+
+const items = [
+  {
+    title: 'Tamper-Proof',
+    description: (
+      <>
+        Blockchain technology ensures that your records are tamper-proof; only
+        you can update it when you need to.
+      </>
+    )
+  },
+  {
+    title: 'Immutable',
+    description: (
+      <>
+        All your records are stored on the blockchain so your record history is
+        accessible to you anytime, anywhere.
+      </>
+    )
+  },
+  {
+    title: 'Accountability',
+    description: (
+      <>
+        You can also ensure that you are providing your information to
+        individuals who are also KYC-verified.
+      </>
+    )
+  }
+]
 
 export default function Showcase() {
   return (
-    <div className='w-full'>
-      <section className='relative flex items-center justify-center lg:justify-between min-h-screen lg:px-36 lg:pt-48 container mx-auto'>
+    <section className='container mx-auto pb-20'>
+      <div className='text-center py-20'>
+        <span className='text-marine-blue text-xl'>
+          Tamper-Proof and Immutable
+        </span>
+        <h2 className='text-white text-5xl font-semibold mt-5'>
+          The 1st Blockchain-Enabled
+          <br />
+          ID Verification System in The World
+        </h2>
+      </div>
+      <div className='relative'>
         <Image
-          className='hidden lg:block absolute left-1/2 transform -translate-x-1/2 bottom-0 max-w-full max-h-full'
-          //   className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src='/images/hero-image.svg'
-          alt='Hero Image'
-          width={739}
-          height={800}
+          className='hidden lg:block absolute -top-72 -left-32 xl:-left-24 2xl:left-14 cube-3'
+          src='/images/cube3.svg'
+          alt='Cube'
+          width={400}
+          height={400}
           priority
         />
-        <div className='z-10'>
-          <h1 className='capitalize text-5xl md:text-7xl font-semibold'>
-            Step into
-            <br /> the future
-            <br /> of ID
-            <br /> verification
-          </h1>
-          <div className='flex justify-center lg:justify-start gap-5 mt-12'>
-            <button className='btn-contained'>Book a Demo</button>
-            <button className='btn-outline'>Discover More</button>
-          </div>
+        <Image
+          className='hidden lg:block absolute -top-28 -left-32 xl:-left-48 2xl:-left-6 cube-2'
+          src='/images/cube2.svg'
+          alt='Cube'
+          width={485}
+          height={485}
+          priority
+        />
+        <Image
+          className='hidden lg:block absolute -top-28 -left-32 xl:-left-16 2xl:left-56 cube-1'
+          src='/images/cube1.svg'
+          alt='Cube'
+          width={712}
+          height={712}
+          priority
+        />
+        <div className='space-y-12 text-center lg:text-left lg:w-1/2 ml-auto px-10 xl:px-36'>
+          {items.map(item => (
+            <div key={item.title} className='space-y-3 text-lg'>
+              <span className='text-marine-blue'>{item.title}</span>
+              <p className='text-white'>{item.description}</p>
+            </div>
+          ))}
+          <CtaButtons />
         </div>
-        <div className='z-10 text-lg hidden lg:block'>
-          Unlock a secure advantage with our
-          <br /> cutting-edge KYC solutions and
-          <br /> a comprehensive suite of tools to verify
-          <br /> and authenticate customer identities.
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }

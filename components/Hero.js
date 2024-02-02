@@ -1,17 +1,39 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Lottie from 'lottie-react'
 import heroBgAnimation from '../public/lotties/hero-bg.json'
+import { useInView } from 'react-intersection-observer'
+
+export const CtaButtons = () => (
+  <div className='flex justify-center lg:justify-start gap-5 mt-12'>
+    <button className='btn-contained'>Book a Demo</button>
+    <button className='btn-outline'>Discover More</button>
+  </div>
+)
 
 export default function Hero() {
+  const animationRef = useRef()
+  const [ref, inView] = useInView({ triggerOnce: false })
+
+  useEffect(() => {
+    if (inView) {
+      animationRef.current?.goToAndPlay(0)
+    }
+  }, [inView])
+
   return (
-    <div className='w-full'>
-      <section className='relative flex items-center justify-center lg:justify-between min-h-screen lg:px-36 lg:pt-48 container mx-auto'>
+    <section className='w-full overflow-hidden'>
+      <div
+        className='relative flex items-center justify-center lg:justify-between min-h-screen lg:px-36 lg:pt-48 container mx-auto'
+        ref={ref}
+      >
         <Lottie
           animationData={heroBgAnimation}
           loop={false}
           className='hero-lottie'
+          lottieRef={animationRef}
         />
         <Image
           className='hidden lg:block absolute left-1/2 transform -translate-x-1/2 bottom-0 max-w-full max-h-full'
@@ -23,16 +45,13 @@ export default function Hero() {
           priority
         />
         <div className='z-10'>
-          <h1 className='capitalize text-5xl md:text-7xl font-semibold'>
+          <h1 className='capitalize text-5xl sm:text-7xl text-center lg:text-left font-semibold'>
             Step into
             <br /> the future
             <br /> of ID
             <br /> verification
           </h1>
-          <div className='flex justify-center lg:justify-start gap-5 mt-12'>
-            <button className='btn-contained'>Book a Demo</button>
-            <button className='btn-outline'>Discover More</button>
-          </div>
+          <CtaButtons />
         </div>
         <div className='z-10 text-lg hidden lg:block'>
           Unlock a secure advantage with our
@@ -40,7 +59,7 @@ export default function Hero() {
           <br /> a comprehensive suite of tools to verify
           <br /> and authenticate customer identities.
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
