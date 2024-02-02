@@ -24,7 +24,7 @@ const items = [
     description: (
       <ul className='xl:list-disc space-y-5 pl-5'>
         <li>
-          Verify official documents such as passports, driver's licenses, and
+          Verify official documents such as passports, driver&apos;s licenses, and
           national IDs with our advanced document authentication technology.
         </li>
         <li>
