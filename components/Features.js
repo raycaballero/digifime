@@ -77,16 +77,17 @@ export default function Features() {
             priority
           />
         </FadeIn>
-        <FadeIn>
-          <div className='space-y-12 text-center xl:text-left xl:w-1/2 px-10 xl:pr-24 xl:border-r py-16'>
-            {items.map(item => (
-              <div key={item.title} className='space-y-3 text-lg'>
+
+        <div className='space-y-12 text-center xl:text-left xl:w-1/2 px-10 xl:pr-24 xl:border-r py-16'>
+          {items.map(item => (
+            <FadeIn key={item.title}>
+              <div className='space-y-3 text-lg'>
                 <span className='text-marine-blue'>{item.title}</span>
                 <p className='text-white'>{item.description}</p>
               </div>
-            ))}
-          </div>
-        </FadeIn>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   )

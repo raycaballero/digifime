@@ -30,12 +30,11 @@ export default function Solutions() {
             </span>
           </FadeIn>
         </div>
-        
-        <FadeIn>
-          <div className='grid grid-cols-2 lg:grid-cols-4 mt-5'>
-            {solutions.map((solution, i) => (
+
+        <div className='grid grid-cols-2 lg:grid-cols-4 mt-5'>
+          {solutions.map((solution, i) => (
+            <FadeIn key={solution}>
               <div
-                key={solution}
                 className={`group flex flex-col items-start border-t border-l p-10 text-xl hover:cursor-pointer ${
                   i % 4 === 0 ? 'first:ml-0 border-l-0' : ''
                 } ${i % 4 === 3 ? 'last:mr-0' : ''}`}
@@ -53,9 +52,9 @@ export default function Solutions() {
                   />
                 </button>
               </div>
-            ))}
-          </div>
-        </FadeIn>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   )
