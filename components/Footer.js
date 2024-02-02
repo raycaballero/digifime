@@ -60,7 +60,9 @@ export default function Footer() {
               <div className='flex flex-col space-y-10'>
                 <div className='font-semibold'>{link.category}</div>
                 {link.items.map(item => (
-                  <div key={item}>{item}</div>
+                  <FadeIn key={item}>
+                    <div>{item}</div>
+                  </FadeIn>
                 ))}
               </div>
             </FadeIn>
