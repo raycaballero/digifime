@@ -3,6 +3,7 @@ import Carousel from '@/components/Carousel'
 import Showcase from '@/components/Showcase'
 import Features from '@/components/Features'
 import Solutions from '@/components/Solutions'
+import Roadmap from '@/components/Roadmap'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Showcase />
         <Features />
         <Solutions />
+        <Roadmap />
       </div>
     </main>
   )

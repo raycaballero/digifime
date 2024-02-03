@@ -13,8 +13,8 @@ const Carousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ['1%', '-95%'])
 
   return (
-    <section ref={targetRef} className='relative h-[300vh] bg-dark-blue'>
-      <div className='sticky top-0 flex h-screen items-center overflow-hidden pl-48'>
+    <section ref={targetRef} className='relative h-[600vh] bg-dark-blue'>
+      <div className='sticky top-0 flex h-screen items-center overflow-hidden pl-96'>
         <motion.div style={{ x }} className='flex gap-12'>
           {cards.map(card => {
             return <Card card={card} key={card.id} />

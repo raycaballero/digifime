@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    scroll-behavior: smooth;
+html, div {
+    scroll-behavior: smooth !important;
 }
 
 body {
     @apply bg-dark-blue text-white;
+    scroll-behavior: smooth !important;
 }
 
 @layer components {
