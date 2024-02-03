@@ -38,18 +38,8 @@ const Roadmap = () => {
 
   return (
     <section ref={targetRef} className='relative h-[900vh] bg-black'>
-      <div className='sticky -ml-96 top-0'>
-        <FadeIn>
-          <Image
-            src='/images/roadmap-image.svg'
-            alt='Roadmap Image'
-            width={1200}
-            height={1200}
-            priority
-          />
-        </FadeIn>
-      </div>
-      <div className='sticky top-0'>
+
+      <div className='sticky top-0 z-20'>
         <div className='text-center pt-28 pb-10'>
           <FadeIn>
             <span className='text-marine-blue text-xl'>Roadmap</span>
@@ -86,6 +76,17 @@ const Roadmap = () => {
             ))}
           </motion.div>
         </div>
+      </div>
+      <div className='sticky -ml-96 top-0 z-10'>
+        <FadeIn>
+          <Image
+            src='/images/roadmap-image.svg'
+            alt='Roadmap Image'
+            width={1200}
+            height={1200}
+            priority
+          />
+        </FadeIn>
       </div>
     </section>
   )
