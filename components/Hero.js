@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Lottie from 'lottie-react'
-import heroBgAnimation from '../public/lotties/data.json'
+import heroBgAnimation from '../public/lotties/mainbanner.json'
 import { useInView } from 'react-intersection-observer'
 import FadeIn from './FadeIn'
 
@@ -39,7 +39,7 @@ export default function Hero() {
         <Image
           className='hidden lg:block absolute left-1/2 transform -translate-x-1/2 bottom-0 max-w-full max-h-full'
           //   className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src='/images/hero-image.svg'
+          src='/images/girl2.png'
           alt='Hero Image'
           width={739}
           height={800}

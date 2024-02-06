@@ -1,7 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import FadeIn from './FadeIn'
+import ScrollBasedLottie from './lotties/ScrollBasedLottie'
+import phoneAnimation from '../public/lotties/phone.json'
 
 const items = [
   {
@@ -54,7 +55,7 @@ const items = [
 
 export default function Features() {
   return (
-    <section className='container mx-auto pb-20'>
+    <section className='container mx-auto pb-20 overflow-hidden'>
       <FadeIn>
         <div className='text-center pt-20 pb-10'>
           <span className='text-marine-blue text-xl'>Features</span>
@@ -66,17 +67,9 @@ export default function Features() {
           </span>
         </div>
       </FadeIn>
-      <div className='relative border-t'>
-        <FadeIn>
-          <Image
-            className='hidden xl:block absolute top-20 right-0 cube-3'
-            src='/images/features-image.svg'
-            alt='Features'
-            width={712}
-            height={712}
-            priority
-          />
-        </FadeIn>
+      <div className='flex border-t'>
+        {/* <FadeIn> */}
+        {/* </FadeIn> */}
 
         <div className='space-y-12 text-center xl:text-left xl:w-1/2 px-10 xl:pr-24 xl:border-r py-16'>
           {items.map(item => (
@@ -87,6 +80,12 @@ export default function Features() {
               </div>
             </FadeIn>
           ))}
+        </div>
+        <div className='relative border-t flex-1'>
+          <ScrollBasedLottie
+            animationData={phoneAnimation}
+            className='hidden xl:block absolute w-[200%] -left-96'
+          />
         </div>
       </div>
     </section>
