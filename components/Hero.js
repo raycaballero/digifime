@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Lottie from 'lottie-react'
-import heroBgAnimation from '../public/lotties/hero-bg.json'
+import heroBgAnimation from '../public/lotties/data.json'
 import { useInView } from 'react-intersection-observer'
 import FadeIn from './FadeIn'
 

@@ -11,7 +11,8 @@ module.exports = {
         '8xl': '4rem'
       },
       colors: {
-        'dark-blue': '#0A0921',
+        // 'dark-blue': '#0A0921',
+        'dark-blue': 'rgb(10, 9, 25);',
         'light-blue': '#1454F5',
         'marine-blue': '#013FE5'
       }
