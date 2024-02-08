@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero'
-import Carousel from '@/components/Carousel'
+// import Carousel from '@/components/Carousel'
 import Showcase from '@/components/Showcase'
 import Features from '@/components/Features'
 import Solutions from '@/components/Solutions'
@@ -10,7 +10,7 @@ export default function Home() {
     <main className='flex justify-center min-h-screen min-w-screen'>
       <div className='w-full'>
         <Hero />
-        <Carousel />
+        {/* <Carousel /> */}
         <Showcase />
         <Features />
         <Solutions />
