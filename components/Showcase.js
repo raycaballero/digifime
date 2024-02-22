@@ -39,10 +39,10 @@ export default function Showcase() {
     <section className='container mx-auto pb-20'>
       <FadeIn>
         <div className='text-center py-20'>
-          <span className='text-marine-blue text-xl'>
+          <span className='text-marine-blue text-lg md:text-xl'>
             Tamper-Proof and Immutable
           </span>
-          <h2 className='text-white text-5xl font-semibold mt-5'>
+          <h2 className='section-heading mt-5'>
             The 1st Blockchain-Enabled
             <br />
             ID Verification System in The World
@@ -52,7 +52,7 @@ export default function Showcase() {
       <div className='relative'>
         <FadeIn>
           <Image
-            className='hidden lg:block absolute -top-72 -left-32 xl:-left-24 2xl:left-14 cube-3'
+            className='cube cube-3'
             src='/images/cube3.svg'
             alt='Cube'
             width={400}
@@ -62,7 +62,7 @@ export default function Showcase() {
         </FadeIn>
         <FadeIn>
           <Image
-            className='hidden lg:block absolute -top-28 -left-32 xl:-left-48 2xl:-left-6 cube-2'
+            className='cube cube-2'
             src='/images/cube2.svg'
             alt='Cube'
             width={485}
@@ -72,7 +72,7 @@ export default function Showcase() {
         </FadeIn>
         <FadeIn>
           <Image
-            className='hidden lg:block absolute -top-28 -left-32 xl:-left-16 2xl:left-56 cube-1'
+            className='cube cube-1'
             src='/images/cube1.svg'
             alt='Cube'
             width={712}
@@ -80,10 +80,10 @@ export default function Showcase() {
             priority
           />
         </FadeIn>
-        <div className='space-y-12 text-center lg:text-left lg:w-1/2 ml-auto px-10 xl:px-36'>
+        <div className='space-y-8 md:space-y-12 text-center lg:text-left lg:w-1/2 ml-auto md:px-10 xl:px-36'>
           {items.map(item => (
             <FadeIn key={item.title}>
-              <div className='space-y-3 text-lg'>
+              <div className='space-y-3 md:text-lg px-5 md:px-0'>
                 <span className='text-marine-blue'>{item.title}</span>
                 <p className='text-white'>{item.description}</p>
               </div>

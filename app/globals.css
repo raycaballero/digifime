@@ -8,12 +8,23 @@ html, div {
 
 body {
     @apply bg-dark-blue text-white;
-    scroll-behavior: smooth !important;
+    /* margin: 0;
+    height:100vh;
+    width:100vw; */
+}
+
+.scroll-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    will-change: transform;
 }
 
 @layer components {
     .btn-contained {
-        @apply bg-marine-blue text-white px-5 py-1;
+        @apply bg-marine-blue text-white px-5 py-1 font-semibold;
 
         &:hover {
             @apply bg-light-blue;
@@ -26,18 +37,30 @@ body {
     }
 
     .btn-outline {
-        @apply bg-none text-white border border-marine-blue px-5 py-1;
+        @apply bg-none text-white border border-marine-blue px-5 py-1 font-semibold;
 
         &:hover {
             @apply border-light-blue bg-light-blue;
         }
     }
 
+    section {
+        @apply px-5;
+    }
+
+    .section-heading {
+        @apply text-white text-3xl md:text-5xl font-semibold;
+    }
+
+    .hero-image {
+        @apply brightness-[.4] lg:brightness-100 absolute left-1/2 transform -translate-x-1/2 bottom-0 max-w-full max-h-full;
+    }
+
     .hero-lottie {
         width: 103vw;
-        height: 100vh;
+        height: 101vh;
         position: absolute;
-        top: 0;
+        top: -4px;
         left: -6.25%;
 
         @media only screen and (max-width: 1366px) {
@@ -65,16 +88,24 @@ body {
         }
     }
 
+    /* Showcase section */
+    .cube {
+        @apply absolute;
+    }
+
     .cube-1 {
         animation: upAndDown 1.2s ease-in-out infinite;
+        @apply brightness-[.3] lg:brightness-100 -top-28 -left-32 xl:-left-16 2xl:left-56;
     }
 
     .cube-2 {
         animation: upAndDown 1s ease-in-out infinite;
+        @apply brightness-[.3] lg:brightness-100 -top-28 -left-48 xl:-left-48 2xl:-left-6;
     }
 
     .cube-3 {
         animation: upAndDown 1.4s ease-in-out infinite;
+        @apply opacity-30 lg:opacity-100 -top-72 -left-56 xl:-left-24 2xl:left-12;
     }
 
     .fade-in {

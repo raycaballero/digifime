@@ -18,13 +18,13 @@ export default function Solutions() {
       <div className='container mx-auto pb-20'>
         <div className='text-center pt-20 pb-10'>
           <FadeIn>
-            <span className='text-marine-blue text-xl'>Solutions</span>
-            <h2 className='text-white text-5xl font-semibold my-5'>
+            <span className='text-marine-blue text-lg md:text-xl'>Solutions</span>
+            <h2 className='section-heading my-5'>
               Provide a Seamless User Journey
               <br />
               Accelerate Your Business Growth
             </h2>
-            <span className='text-gray-300 text-xl'>
+            <span className='text-gray-300 md:text-xl'>
               Experience the future of secure and compliant identity
               verification.
             </span>
@@ -35,9 +35,10 @@ export default function Solutions() {
           {solutions.map((solution, i) => (
             <FadeIn key={solution}>
               <div
-                className={`group flex flex-col items-start border-t border-l p-10 text-xl hover:cursor-pointer ${
-                  i % 4 === 0 ? 'first:ml-0 border-l-0' : ''
-                } ${i % 4 === 3 ? 'last:mr-0' : ''}`}
+                className={`group flex flex-col items-start border-t border-l p-5 md:p-10 text-sm md:text-xl hover:cursor-pointer 
+                ${i % 2 === 0 && 'border-l-0 lg:border-l'} 
+                ${i % 4 === 0 && 'lg:border-l-0'} 
+                `}
               >
                 <div className='bg-light-blue rounded-full w-[52px] h-[52px] mb-8 group-hover:opacity-80'></div>
                 <span className='group-hover:opacity-80'>{solution}</span>

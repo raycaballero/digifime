@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section className='w-full overflow-hidden'>
       <div
-        className='relative flex items-center justify-center lg:justify-between min-h-screen lg:px-36 lg:pt-48 container mx-auto'
+        className='relative flex flex-col space-y-24 lg:flex-row items-center justify-start lg:justify-between min-h-screen xl:px-36 pt-36 lg:pt-20 container mx-auto'
         ref={ref}
       >
         <Lottie
@@ -37,9 +37,9 @@ export default function Hero() {
           lottieRef={animationRef}
         />
         <Image
-          className='hidden lg:block absolute left-1/2 transform -translate-x-1/2 bottom-0 max-w-full max-h-full'
+          className='hero-image'
           //   className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src='/images/girl2.png'
+          src='/images/hero-image.svg'
           alt='Hero Image'
           width={739}
           height={800}
@@ -47,21 +47,26 @@ export default function Hero() {
         />
         <FadeIn>
           <div className='z-10'>
-            <h1 className='capitalize text-5xl sm:text-7xl text-center lg:text-left font-semibold'>
+            <h1 className='capitalize text-5xl sm:text-7xl text-center lg:text-left font-bold'>
               Step into
               <br /> the future
               <br /> of ID
               <br /> verification
             </h1>
+            <div className='hidden lg:block'>
             <CtaButtons />
+          </div>
           </div>
         </FadeIn>
         <FadeIn>
-          <div className='z-10 text-lg hidden lg:block'>
+          <div className='z-10 lg:text-lg text-center lg:text-left'>
             Unlock a secure advantage with our
             <br /> cutting-edge KYC solutions and
             <br /> a comprehensive suite of tools to verify
             <br /> and authenticate customer identities.
+          </div>
+          <div className='block lg:hidden'>
+            <CtaButtons />
           </div>
         </FadeIn>
       </div>

@@ -42,7 +42,7 @@ const Roadmap = () => {
       <div className='sticky top-0 z-20'>
         <div className='text-center pt-28 pb-10'>
           <FadeIn>
-            <span className='text-marine-blue text-xl'>Roadmap</span>
+            <span className='text-marine-blue text-lg md:text-xl'>Roadmap</span>
             <h2 className='text-white text-6xl font-semibold my-5'>
               Step Into the Future
               <br />

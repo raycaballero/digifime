@@ -56,7 +56,7 @@ export default function Header() {
 
   return (
     <nav
-      className={`w-full fixed p-6 z-50 ${
+      className={`w-full absolute p-6 z-50 ${
         scrolled ? 'bg-dark-blue text-white' : ''
       }`}
     >
@@ -95,7 +95,7 @@ export default function Header() {
               <div className='container relative h-full flex items-center justify-center text-center'>
                 <button
                   onClick={toggleDrawer}
-                  className='text-white hover:text-gray-300 absolute top-5 right-0'
+                  className='text-white hover:text-gray-300 absolute top-6 right-6 md:right-0'
                 >
                   <svg
                     className='w-6 h-6'
