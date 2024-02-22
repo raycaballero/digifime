@@ -212,7 +212,7 @@ const Roadmap = () => {
             </span>
           </div>
         </FadeIn>
-        <div className='absolute left-1/2 transform -translate-x-1/2 xl:-bottom-56 max-w-full max-h-full'>
+        <div className='absolute left-1/2 transform -translate-x-1/2 bottom-36 sm:bottom-28 md:bottom-0 xl:-bottom-56 max-w-full max-h-full scale-[250%] md:scale-100'>
           <FadeIn>
             <Image
               src='/images/roadmap-image.svg'
