@@ -78,6 +78,7 @@ body {
         }
     }
 
+    /* Showcase section */
     @keyframes upAndDown {
         0%, 100% {
             transform: translateY(0);
@@ -87,8 +88,7 @@ body {
             transform: translateY(-20px);
         }
     }
-
-    /* Showcase section */
+    
     .cube {
         @apply absolute;
     }
@@ -105,7 +105,7 @@ body {
 
     .cube-3 {
         animation: upAndDown 1.4s ease-in-out infinite;
-        @apply opacity-30 lg:opacity-100 -top-72 -left-56 xl:-left-24 2xl:left-12;
+        @apply opacity-30 lg:opacity-100 -top-72 -left-56 xl:-left-24 2xl:left-8;
     }
 
     .fade-in {
@@ -118,6 +118,23 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* Roadmap */
+    @keyframes pulsate {
+        0% {
+          transform: scale(.8) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.2) rotate(180deg);
+        }
+        100% {
+          transform: scale(.8) rotate(360deg);
+        }
+      }
+      
+      .pulsating {
+        animation: pulsate 60s infinite ease-in-out; /* Adjust duration as needed */
+      }
 }
 
 @layer utilities {

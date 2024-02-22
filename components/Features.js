@@ -1,5 +1,7 @@
 'use client'
 
+import { useRef } from 'react'
+import { motion, useTransform, useScroll } from 'framer-motion'
 import FadeIn from './FadeIn'
 import ScrollBasedLottie from './lotties/ScrollBasedLottie'
 import phoneAnimation from '../public/lotties/phone.json'
@@ -84,35 +86,56 @@ const FEATURES = [
 ]
 
 export default function Features() {
+  const targetRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef
+  })
+
+  const y = useTransform(scrollYProgress, [0, 1], ['1%', '-60%'])
+
   return (
-    <section className='container mx-auto pb-20 overflow-hidden'>
-      <FadeIn>
-        <div className='text-center pt-20 pb-10'>
-          <span className='text-marine-blue text-lg md:text-xl'>Features</span>
-          <h2 className='section-heading my-5'>
-            Secure, Compliant, Seamless, Customizable
-          </h2>
-          <span className='text-gray-300 text-lg md:text-xl'>
-            Experience the future of secure and compliant identity verification.
-          </span>
-        </div>
-      </FadeIn>
-      <div className='flex border-t'>
-        <div className='space-y-8 md:space-y-12 text-center xl:text-left xl:w-1/2 md:px-10 xl:pr-24 xl:border-r py-10 lg:py-16'>
-          {FEATURES.map(item => (
-            <FadeIn key={item.title}>
-              <div className='space-y-3 md:text-lg px-5 md:px-0'>
-                <span className='text-marine-blue'>{item.title}</span>
-                <p className='text-white'>{item.description}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-        <div className='relative flex-1'>
-          <ScrollBasedLottie
-            animationData={phoneAnimation}
-            className='hidden xl:block absolute w-[200%] -left-96'
-          />
+    <section
+      ref={targetRef}
+      className='relative h-[900vh] container mx-auto pb-20'
+    >
+      <div className='sticky top-0 z-20 h-screen'>
+        <FadeIn>
+          <div className='text-center py-10'>
+            <span className='text-marine-blue text-lg md:text-xl'>
+              Features
+            </span>
+            <h2 className='section-heading my-5'>
+              Secure, Compliant, Seamless, Customizable
+            </h2>
+            <span className='text-gray-300 text-lg md:text-xl'>
+              Experience the future of secure and compliant identity
+              verification.
+            </span>
+          </div>
+        </FadeIn>
+
+        <div className='flex border-t'>
+          <div className='space-y-8 md:space-y-12 text-center xl:text-left xl:w-1/2 md:px-10 xl:pr-24 xl:border-r py-10 lg:py-16 md:h-[80vh] overflow-hidden'>
+            <motion.div style={{ y }} className='flex flex-col gap-12'>
+              {FEATURES.map((item, i) => (
+                <FadeIn key={item.title}>
+                  <div
+                    className='space-y-3 md:text-lg px-5 md:px-0'
+                    id={i === 0 && 'featuresSection'}
+                  >
+                    <span className='text-marine-blue'>{item.title}</span>
+                    <p className='text-white'>{item.description}</p>
+                  </div>
+                </FadeIn>
+              ))}
+            </motion.div>
+          </div>
+          <div className='relative flex-1 overflow-hidden'>
+            <ScrollBasedLottie
+              animationData={phoneAnimation}
+              className='hidden xl:block absolute w-[200%] -left-96'
+            />
+          </div>
         </div>
       </div>
     </section>

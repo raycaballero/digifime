@@ -6,6 +6,7 @@ import Lottie from 'lottie-react'
 import heroBgAnimation from '../public/lotties/mainbanner.json'
 import { useInView } from 'react-intersection-observer'
 import FadeIn from './FadeIn'
+// import '@lottiefiles/lottie-player'
 
 export const CtaButtons = () => (
   <div className='flex justify-center lg:justify-start gap-5 mt-12'>
@@ -30,10 +31,16 @@ export default function Hero() {
         className='relative flex flex-col space-y-24 lg:flex-row items-center justify-start lg:justify-between min-h-screen xl:px-36 pt-36 lg:pt-20 container mx-auto'
         ref={ref}
       >
+        {/* <lottie-player
+          autoplay
+          src='/lotties/mainbanner.json'
+          lottieRef={animationRef}
+          style={{ width: '100vw', height: '101vh', position: 'absolute', top: -10, left: 0, zIndex: -1,}}
+        ></lottie-player> */}
         <Lottie
           animationData={heroBgAnimation}
-          loop={false}
           className='hero-lottie'
+          loop={false}
           lottieRef={animationRef}
         />
         <Image
@@ -54,8 +61,8 @@ export default function Hero() {
               <br /> verification
             </h1>
             <div className='hidden lg:block'>
-            <CtaButtons />
-          </div>
+              <CtaButtons />
+            </div>
           </div>
         </FadeIn>
         <FadeIn>

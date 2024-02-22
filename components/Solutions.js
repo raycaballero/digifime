@@ -16,7 +16,7 @@ export default function Solutions() {
   return (
     <section className='w-full bg-black rounded-t-8xl'>
       <div className='container mx-auto pb-20'>
-        <div className='text-center pt-20 pb-10'>
+        <div className='text-center py-10 md:pt-20'>
           <FadeIn>
             <span className='text-marine-blue text-lg md:text-xl'>Solutions</span>
             <h2 className='section-heading my-5'>

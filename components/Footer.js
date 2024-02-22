@@ -38,7 +38,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <section className='w-full bg-black'>
+    <section className='w-full bg-black z-40 pt-56'>
       <div className='container mx-auto py-20 border-t flex flex-col xl:flex-row gap-20 xl:gap-64 items-center xl:items-start'>
         <div className='w-1/2'>
           <FadeIn>
@@ -57,7 +57,7 @@ export default function Footer() {
         <div className='grid text-center lg:text-left lg:grid-cols-3 space-y-20 lg:space-y-0 flex-grow w-full'>
           {links.map(link => (
             <FadeIn key={link.category}>
-              <div className='flex flex-col space-y-10'>
+              <div className='flex flex-col space-y-5 xl:space-y-10'>
                 <div className='font-semibold'>{link.category}</div>
                 {link.items.map(item => (
                   <FadeIn key={item}>
