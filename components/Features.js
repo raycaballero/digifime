@@ -69,7 +69,7 @@ const FEATURES = [
     )
   },
   {
-    title: 'Customizalbe Workflows',
+    title: 'Customizable Workflows',
     description: (
       <ul className='xl:list-disc space-y-5 xl:pl-5'>
         <li>
