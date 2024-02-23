@@ -176,7 +176,7 @@ const GOALS = [
 const Card = ({ card }) => {
   return (
     <FadeIn key={card.id}>
-      <div className='space-y-3 md:text-lg px-5 md:px-0 w-[460px] flex flex-col items-start'>
+      <div className='space-y-3 md:text-lg px-5 md:px-0 w-[300px] md:w-[460px] flex flex-col items-start'>
         <span className='bg-marine-blue px-6 py-2 rounded-full text-sm -mt-4 mb-4 -ml-4'>
           {card.quarter}
         </span>
@@ -193,13 +193,13 @@ const Roadmap = () => {
     target: targetRef
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ['-5%', '-80%'])
+  const x = useTransform(scrollYProgress, [0, 1], ['-5%', '-90%'])
 
   return (
-    <section ref={targetRef} className='relative h-[900vh] bg-black'>
+    <section ref={targetRef} className='relative h-[900vh] bg-black px-0'>
       <div className='sticky top-0'>
         <FadeIn>
-          <div className='text-center py-10 z-40'>
+          <div className='text-center px-5 py-10 z-40'>
             <span className='text-marine-blue text-lg md:text-xl'>Roadmap</span>
             <h2 className='section-heading my-5'>
               Step Into the Future
@@ -212,7 +212,7 @@ const Roadmap = () => {
             </span>
           </div>
         </FadeIn>
-        <div className='absolute left-1/2 transform -translate-x-1/2 bottom-36 sm:bottom-28 md:bottom-0 xl:-bottom-56 max-w-full max-h-full scale-[250%] md:scale-100'>
+        <div className='absolute left-1/2 transform -translate-x-1/2 bottom-36 sm:bottom-28 md:bottom-0 xl:-bottom-56 max-w-full max-h-full scale-[150%] sm:scale-100'>
           <FadeIn>
             <Image
               src='/images/roadmap-image.svg'
@@ -225,8 +225,8 @@ const Roadmap = () => {
           </FadeIn>
         </div>
         {/* <div className='flex items-start justify-end overflow-hidden gap-12 container mx-auto px-36 '> */}
-        <div className='sticky top-0 flex h-[60vh] items-center overflow-hidden pl-96'>
-          <motion.div style={{ x }} className='flex gap-16 border-t'>
+        <div className='sticky top-0 flex h-[60vh] items-center overflow-hidden pl-48 md:pl-96'>
+          <motion.div style={{ x }} className='flex gap-8 md:gap-16 border-t'>
             {GOALS.map(card => {
               return <Card card={card} key={card.id} />
             })}
