@@ -48,8 +48,12 @@ export default function Hero() {
           //   className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src='/images/hero-image.png'
           alt='Hero Image'
-          width={634}
-          height={800}
+          sizes='100vw'
+          fill
+          style={{
+            backgroundPosition: 'center',
+            objectFit: 'contain'
+          }}
           priority
         />
         <FadeIn>
