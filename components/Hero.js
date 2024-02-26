@@ -48,7 +48,7 @@ export default function Hero() {
           //   className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src='/images/hero-image.png'
           alt='Hero Image'
-          width={684}
+          width={634}
           height={800}
           priority
         />
