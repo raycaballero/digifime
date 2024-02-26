@@ -53,31 +53,28 @@ export default function Showcase() {
         <FadeIn>
           <Image
             className='cube cube-3'
-            src='/images/cube3.svg'
+            src='/images/cube3.png'
             alt='Cube'
             width={400}
             height={400}
-            priority
           />
         </FadeIn>
         <FadeIn>
           <Image
             className='cube cube-2'
-            src='/images/cube2.svg'
+            src='/images/cube2.png'
             alt='Cube'
             width={485}
             height={485}
-            priority
           />
         </FadeIn>
         <FadeIn>
           <Image
             className='cube cube-1'
-            src='/images/cube1.svg'
+            src='/images/cube1.png'
             alt='Cube'
             width={712}
             height={712}
-            priority
           />
         </FadeIn>
         <div className='space-y-8 md:space-y-12 text-center lg:text-left lg:w-1/2 ml-auto md:px-10 xl:px-36'>

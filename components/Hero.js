@@ -46,9 +46,9 @@ export default function Hero() {
         <Image
           className='hero-image'
           //   className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src='/images/hero-image.svg'
+          src='/images/hero-image.png'
           alt='Hero Image'
-          width={739}
+          width={684}
           height={800}
           priority
         />

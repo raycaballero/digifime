@@ -193,7 +193,7 @@ const Roadmap = () => {
     target: targetRef
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ['-5%', '-90%'])
+  const x = useTransform(scrollYProgress, [0, 1], ['-5%', '-100%'])
 
   return (
     <section ref={targetRef} className='relative h-[900vh] bg-black px-0'>
@@ -215,12 +215,11 @@ const Roadmap = () => {
         <div className='absolute left-1/2 transform -translate-x-1/2 bottom-36 sm:bottom-28 md:bottom-0 xl:-bottom-56 max-w-full max-h-full scale-[150%] sm:scale-100'>
           <FadeIn>
             <Image
-              src='/images/roadmap-image.svg'
+              src='/images/roadmap-image.png'
               alt='Roadmap Image'
               className='brightness-[30%] pulsating'
               width={1200}
               height={1200}
-              priority
             />
           </FadeIn>
         </div>
