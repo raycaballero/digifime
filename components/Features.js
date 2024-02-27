@@ -96,7 +96,7 @@ export default function Features() {
   return (
     <section
       ref={targetRef}
-      className='relative h-[900vh] container mx-auto pb-20'
+      className='relative h-[400vh] container mx-auto pb-20'
       id="features"
     >
       <div className='sticky top-0 z-20 h-screen'>
