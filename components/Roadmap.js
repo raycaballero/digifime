@@ -36,7 +36,7 @@ const GOALS = [
         <li>
           Digibox implementation - one perpetual KYC source for all business
         </li>
-        <li>Primary Blockchain integration - documents as NFT's</li>
+        <li>Primary Blockchain integration - documents as NFT&apos;s</li>
         <li>Secondary Blockchain integration</li>
         <li>Publish APIs and SDKs</li>
         <li>Vulnerability and Penetration testing (VAPT)</li>
