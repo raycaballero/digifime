@@ -8,166 +8,68 @@ import Image from 'next/image'
 const GOALS = [
   {
     quarter: 'Q1 2024',
-    title: 'Industry-specific solutions',
+    // title: 'Industry-specific solutions',
     description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Develop tailored solutions for specific industries such as healthcare,
-          finance, and online marketplaces.
-        </li>
-        <li>Ensure compliance with industry regulations and standards.</li>
+      <ul className='xl:list-disc space-y-1 xl:pl-5'>
+        <li>First level KYC platform - OCR</li>
+        <li>Registration and password module</li>
+        <li>Referral module</li>
+        <li>Commision module</li>
+        <li>Credits module</li>
+        <li>Basic admin panel</li>
+        <li>Security features</li>
+        <li>First country - Philippines databases integration</li>
+        <li>Website</li>
+        <li>Pilot integration - Top Wallet</li>
+        <li>Third party pilot validation - QPay</li>
+        <li>Social media presence kick-off</li>
       </ul>
     )
   },
   {
     quarter: 'Q2 2024',
-    title: 'Customizable workflows',
     description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
+      <ul className='xl:list-disc space-y-1 xl:pl-5'>
+        <li>User acquisition - 6 clients and 150k users</li>
+        <li>2 government contracts</li>
+        <li>2 additional countries added</li>
         <li>
-          Introduce a flexible and customizable workflow system to accommodate
-          varying verification processes across industries.
+          Digibox implementation - one perpetual KYC source for all business
         </li>
-        <li>Provide APIs for seamless integration with existing systems.</li>
+        <li>Primary Blockchain integration - documents as NFT's</li>
+        <li>Secondary Blockchain integration</li>
+        <li>Publish APIs and SDKs</li>
+        <li>Vulnerability and Penetration testing (VAPT)</li>
+        <li>Code review</li>
+        <li>Seed round - 6 month runway</li>
       </ul>
     )
   },
   {
-    quarter: 'Q2 2024',
-    title: 'Real-time monitoring & alerts',
+    quarter: 'Q3 2024',
     description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Implement a real-time monitoring system to detect and alert on
-          suspicious activities.
-        </li>
-        <li>
-          Enhance fraud prevention mechanisms through proactive alerts and
-          notifications.
-        </li>
+      <ul className='xl:list-disc space-y-1 xl:pl-5'>
+        <li>User acquisition - 12 clients and 300k users</li>
+        <li>2 additional countries added</li>
+        <li>Token creation</li>
+        <li>Tokenomics and white paper</li>
+        <li>Digibox decentralized - Reward for contribution</li>
+        <li>Community building</li>
+        <li>Token raise</li>
+        <li>Smart contract audit</li>
+        <li>Code review 2</li>
       </ul>
     )
   },
   {
-    quarter: 'Q2 2024',
-    title: 'Advanced biometric options',
+    quarter: 'Q4 2024',
     description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Integrate additional biometric verification methods, such as retina
-          scanning and palm recognition.
-        </li>
-        <li>
-          Enhance existing biometric algorithms for improved accuracy and
-          security.
-        </li>
-      </ul>
-    )
-  },
-  {
-    quarter: 'Q2 2024',
-    title: 'Multi-language support',
-    description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Expand language support for document verification and user
-          communication.
-        </li>
-        <li>Ensure inclusivity and accessibility for a diverse user base.</li>
-      </ul>
-    )
-  },
-  {
-    quarter: 'Q2 2024',
-    title: 'Enhanced document validation',
-    description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Improve document validation capabilities by incorporating advanced OCR
-          technology.
-        </li>
-        <li>Introduce support for new types of identity documents.</li>
-      </ul>
-    )
-  },
-  {
-    quarter: 'Q2 2024',
-    title: 'Zero-knowledge proofs',
-    description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Implement zero-knowledge proofs to allow identity verification without
-          revealing unnecessary information.
-        </li>
-        <li>Enhance user privacy and reduce the risk of data breaches.</li>
-      </ul>
-    )
-  },
-  {
-    quarter: 'Q2 2024',
-    title: 'Biometric data encryption',
-    description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Utilize blockchain for the secure and decentralized storage of
-          biometric data.
-        </li>
-        <li>
-          Implement encryption mechanisms to protect sensitive information.
-        </li>
-      </ul>
-    )
-  },
-
-  {
-    quarter: 'Q2 2024',
-    title: 'Interoperability & cross-platform integration',
-    description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Ensure compatibility with existing identity standards (e.g., W3C
-          Verifiable Credentials).
-        </li>
-        <li>
-          Facilitate interoperability with other blockchain-based identity
-          solutions.
-        </li>
-        <li>
-          Explore partnerships with organizations adopting decentralized
-          identity standards.
-        </li>
-      </ul>
-    )
-  },
-  {
-    quarter: 'Q2 2024',
-    title: 'User-controlled data sharing',
-    description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Develop a user-centric data-sharing model where individuals have full
-          control over when and with whom they share their identity information.
-        </li>
-        <li>
-          Implement features for users to revoke access to their data at any
-          time.
-        </li>
-      </ul>
-    )
-  },
-  {
-    quarter: 'Q2 2024',
-    title: 'Regulatory compliance',
-    description: (
-      <ul className='xl:list-disc space-y-5 xl:pl-5'>
-        <li>
-          Stay abreast of evolving regulations related to blockchain and
-          identity verification.
-        </li>
-        <li>
-          Implement features that facilitate compliance with regional and
-          industry-specific regulations.
-        </li>
+      <ul className='xl:list-disc space-y-1 xl:pl-5'>
+        <li>User acquisition - 15 clients and 500k users</li>
+        <li>Token listing</li>
+        <li>Expand B2B offerings - OCR v2 (process complex documents)</li>
+        <li>Video KYC</li>
+        <li>Series A - 1 year runway</li>
       </ul>
     )
   }
@@ -196,11 +98,13 @@ const Roadmap = () => {
   const x = useTransform(scrollYProgress, [0, 1], ['-5%', '-100%'])
 
   return (
-    <section ref={targetRef} className='relative h-[900vh] bg-black px-0'>
+    <section ref={targetRef} className='relative h-[900vh] bg-black px-0' id="roadmap">
       <div className='sticky top-0'>
         <FadeIn>
           <div className='text-center px-5 py-10 z-40'>
-            <span className='text-marine-blue text-lg md:text-xl'>Roadmap</span>
+            <span className='text-marine-blue text-xl md:text-2xl font-bold'>
+              Roadmap
+            </span>
             <h2 className='section-heading my-5'>
               Step Into the Future
               <br />

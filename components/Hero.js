@@ -26,7 +26,7 @@ export default function Hero() {
   }, [inView])
 
   return (
-    <section className='w-full overflow-hidden'>
+    <section className='w-full overflow-hidden' id="home">
       <div
         className='relative flex flex-col space-y-24 lg:flex-row items-center justify-start lg:justify-between min-h-screen xl:px-36 pt-36 lg:pt-20 container mx-auto'
         ref={ref}
@@ -59,11 +59,13 @@ export default function Hero() {
         <FadeIn>
           <div className='z-10'>
             <h1 className='capitalize text-5xl sm:text-7xl text-center lg:text-left font-bold'>
-              Step into
-              <br /> the future
-              <br /> of ID
-              <br /> verification
+              Verify Once,
+              <br /> Be Verified
+              <br /> Everywhere
             </h1>
+            <h3 className='capitalize lg:text-lg text-center lg:text-left font-semibold mt-5'>
+              Secure and efficient onboarding across the globe.
+            </h3>
             <div className='hidden lg:block'>
               <CtaButtons />
             </div>
@@ -71,10 +73,10 @@ export default function Hero() {
         </FadeIn>
         <FadeIn>
           <div className='z-10 lg:text-lg text-center lg:text-left'>
-            Unlock a secure advantage with our
-            <br /> cutting-edge KYC solutions and
-            <br /> a comprehensive suite of tools to verify
-            <br /> and authenticate customer identities.
+            Enjoy a secure advantage with <br />
+            our cutting-edge KYC solutions and <br />
+            a comprehensive suite of tools toverify <br />
+            and authenticate customer identities.
           </div>
           <div className='block lg:hidden'>
             <CtaButtons />

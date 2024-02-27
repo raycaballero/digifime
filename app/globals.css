@@ -25,7 +25,7 @@ body {
 
 @layer components {
     .btn-contained {
-        @apply bg-marine-blue text-white px-5 py-1 font-semibold;
+        @apply bg-marine-blue text-white px-5 py-1 font-semibold rounded-lg;
 
         &:hover {
             @apply bg-light-blue;
@@ -34,11 +34,11 @@ body {
     }
 
     .btn-contained-alt {
-        @apply bg-white text-light-blue px-5 py-1 font-bold;
+        @apply bg-white text-light-blue px-5 py-1 font-bold rounded-lg;
     }
 
     .btn-outline {
-        @apply bg-none text-white border border-marine-blue px-5 py-1 font-semibold;
+        @apply bg-none text-white border border-marine-blue px-5 py-1 font-semibold rounded-lg;
 
         &:hover {
             @apply border-light-blue bg-light-blue;

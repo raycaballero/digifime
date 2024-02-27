@@ -3,34 +3,30 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-export default function Header() {
-  const links = [
-    {
-      title: 'Home',
-      url: '#'
-    },
-    {
-      title: 'Solutions',
-      url: '#'
-    },
-    {
-      title: 'Pricing',
-      url: '#'
-    },
-    {
-      title: 'Resources',
-      url: '#'
-    },
-    {
-      title: 'Clients',
-      url: '#'
-    },
-    {
-      title: 'About',
-      url: '#'
-    }
-  ]
+export const links = [
+  {
+    title: 'Home',
+    url: '#home'
+  },
+  {
+    title: 'Blockchain',
+    url: '#blockchain'
+  },
+  {
+    title: 'Features',
+    url: '#features'
+  },
+  {
+    title: 'Solutions',
+    url: '#solutions'
+  },
+  {
+    title: 'Roadmap',
+    url: '#roadmap'
+  }
+]
 
+export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [showDrawer, setShowDrawer] = useState(false)
 

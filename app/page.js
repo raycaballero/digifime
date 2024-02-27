@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback, useEffect } from 'react'
 import Hero from '@/components/Hero'
 // import Carousel from '@/components/Carousel'
-import Showcase from '@/components/Showcase'
+import Blockchain from '@/components/Blockchain'
 import Features from '@/components/Features'
 import Solutions from '@/components/Solutions'
 import Roadmap from '@/components/Roadmap'
@@ -75,7 +75,7 @@ export default function Home() {
           <div className='w-full'>
             <Hero />
             {/* <Carousel /> */}
-            <Showcase />
+            <Blockchain />
             <Features />
             <Solutions />
             <Roadmap />

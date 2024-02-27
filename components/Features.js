@@ -97,11 +97,12 @@ export default function Features() {
     <section
       ref={targetRef}
       className='relative h-[900vh] container mx-auto pb-20'
+      id="features"
     >
       <div className='sticky top-0 z-20 h-screen'>
         <FadeIn>
           <div className='text-center py-10'>
-            <span className='text-marine-blue text-lg md:text-xl'>
+            <span className='text-marine-blue text-xl md:text-2xl font-bold'>
               Features
             </span>
             <h2 className='section-heading my-5'>
@@ -123,7 +124,7 @@ export default function Features() {
                     className='space-y-3 md:text-lg px-5 md:px-0'
                     id={i === 0 && 'featuresSection'}
                   >
-                    <span className='text-marine-blue'>{item.title}</span>
+                    <span className='text-marine-blue text-lg font-bold'>{item.title}</span>
                     <p className='text-white'>{item.description}</p>
                   </div>
                 </FadeIn>

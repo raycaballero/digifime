@@ -34,12 +34,12 @@ const items = [
   }
 ]
 
-export default function Showcase() {
+export default function Blockchain() {
   return (
-    <section className='container mx-auto pb-20'>
+    <section className='container mx-auto pb-20' id="blockchain">
       <FadeIn>
         <div className='text-center py-20'>
-          <span className='text-marine-blue text-lg md:text-xl'>
+          <span className='text-marine-blue text-xl md:text-2xl font-bold'>
             Tamper-Proof and Immutable
           </span>
           <h2 className='section-heading mt-5'>
@@ -81,7 +81,7 @@ export default function Showcase() {
           {items.map(item => (
             <FadeIn key={item.title}>
               <div className='space-y-3 md:text-lg px-5 md:px-0'>
-                <span className='text-marine-blue'>{item.title}</span>
+                <span className='text-marine-blue text-lg font-bold'>{item.title}</span>
                 <p className='text-white'>{item.description}</p>
               </div>
             </FadeIn>
